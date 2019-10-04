@@ -1,3 +1,4 @@
+//Insertion Sort
 #include<stdio.h>
 
 void insertionsort(int arr[],int end){
@@ -28,6 +29,39 @@ int main(void) {
   printf("Array after sorting:\n");
   for(int i=0;i<14;i++){
     printf("%d ",arr[i]);
+  }
+  return 0;
+}
+
+//Bubble Sort
+#include <stdio.h>
+
+int main(void) {
+  int arr[8],i,j,index,temp,size=8,change = 0;
+  printf("Enter 8 numbers:");
+  for(i=0;i<8;i++){
+    scanf("%d",&arr[i]);
+  }
+  for(j=0;j<8;j++){
+      printf("%d ",arr[j]);
+    }
+    printf("\n");
+
+
+  for(i=0;i<8;i++){
+    for(j=0;j<size;j++){
+      if(arr[j]>arr[j+1]){
+        temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+      }
+    }
+
+    for(j=0;j<8;j++){
+      printf("%d ",arr[j]);
+
+    }
+    printf("\n");
   }
   return 0;
 }
